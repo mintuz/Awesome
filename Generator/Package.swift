@@ -13,6 +13,7 @@ let package = Package(
     targets: [
         .executableTarget(
             name: "Generator",
-            dependencies: ["SwiftSoup", "Alamofire", "SwiftyJSON"]),
+            dependencies: ["SwiftSoup", "Alamofire", "SwiftyJSON"],
+            resources: [.process("icons.json")])
     ]
 )

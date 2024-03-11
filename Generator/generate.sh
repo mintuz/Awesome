@@ -22,4 +22,4 @@ unzip -joq ./fontawesome-free.zip -d FontAwesome
 cp Output/Awesome.swift ../Classes/Enums
 cp Output/AwesomePro.swift ../Classes/Enums
 
-cp ./FontAwesome/*.ttf ../Assets
+cp ./FontAwesome/*.ttf ../Classes/Assets
