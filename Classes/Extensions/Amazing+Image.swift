@@ -24,7 +24,7 @@ public extension Amazing.Image {
         #if os(iOS) || os(watchOS) || os(tvOS)
             UIGraphicsBeginImageContextWithOptions(size, false , 0.0)
             
-            attributedString.draw(in: CGRect(x: 0, y: (size.height - fontSize) * 0.5, width: size.width, height: fontSize))
+            attributedString.draw(in: CGRect(x: 0, y: max((size.height - fontSize - 1) * 0.5, 0), width: size.width, height: fontSize + 1))
             
             let image = UIGraphicsGetImageFromCurrentImageContext()
             
