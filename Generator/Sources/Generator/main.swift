@@ -3,7 +3,7 @@ import Foundation
 struct Icon {
     var name: String
     var unicode: String
-    
+
     var free: [String]
     var pro: [String]
 }
@@ -23,15 +23,15 @@ var pro: [String: [Icon]] = [:]
 for icon in icons {
     var strippedIcon = icon
     strippedIcon.free = []
-    strippedIcon.pro = []
-    
+    // strippedIcon.pro = []
+
     for style in icon.free {
         if free[style] == nil {
             free[style] = []
         }
         free[style]!.append(strippedIcon)
     }
-    
+
     for style in icon.pro {
         if pro[style] == nil {
             pro[style] = []
@@ -47,11 +47,11 @@ print("Generating AwesomePro.swift")
 let AwesomePro = buildEnum("AwesomePro", from: pro)
 
 let AwesomeDestination = URL(fileURLWithPath: "./Output").appendingPathComponent("Awesome.swift")
-let AwesomeProDestination = URL(fileURLWithPath: "./Output").appendingPathComponent("AwesomePro.swift")
+// let AwesomeProDestination = URL(fileURLWithPath: "./Output").appendingPathComponent("AwesomePro.swift")
 
 do {
     try Awesome.write(to: AwesomeDestination, atomically: true, encoding: String.Encoding.utf8)
-    try AwesomePro.write(to: AwesomeProDestination, atomically: true, encoding: String.Encoding.utf8)
+    // try AwesomePro.write(to: AwesomeProDestination, atomically: true, encoding: String.Encoding.utf8)
 } catch {
     print("Could not write enum files.")
     exit(EXIT_FAILURE)

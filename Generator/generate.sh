@@ -20,6 +20,6 @@ unzip -joq ./fontawesome-free.zip -d FontAwesome
 
 # Copy assets and enums to target directories
 cp Output/Awesome.swift ../Classes/Enums
-cp Output/AwesomePro.swift ../Classes/Enums
+# cp Output/AwesomePro.swift ../Classes/Enums
 
 cp ./FontAwesome/*.ttf ../Classes/Assets
